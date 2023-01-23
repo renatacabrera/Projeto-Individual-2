@@ -4,8 +4,6 @@ const key = document.querySelector('.containerkey')
 const encode = document.getElementById('encode')
 const decode = document.getElementById('decode')
 
-const radiobtn = document.querySelector('.radiobtn')
-const btn = document.querySelector('button')
 
 // Cifra de César
 
@@ -50,12 +48,12 @@ if (encode.checked) {
 
 // Ativação do campo de deslocamento da Cifra de César
 select.addEventListener("click", function () {
-    if (select.value == "cifra") {
-      key.style.display = "block"
-    } else {
-      key.style.display = "none"
-    } // se não selecionado esse campo não aparece
-  })
+  if (select.value == "cifra") {
+    key.style.display = "block"
+  } else {
+    key.style.display = "none"
+  } // se não selecionado esse campo não aparece
+})
 
 // Base64
 function base64() {
@@ -74,7 +72,7 @@ function base64() {
   }
 
 // Função dos botões de codificar e decodificar 
-radiobtn.addEventListener("click", function () {
+$('.radiobtn').click(function(){
   if (encode.checked) {
     btn.innerHTML = "Codificar sua Mensagem!"
   } else if (decode.checked) {
@@ -82,11 +80,10 @@ radiobtn.addEventListener("click", function () {
   } 
 }) // muda de acordo com o que foi selecionado acima 
 
-btn.addEventListener("click", function (event) {
-  event.preventDefault()
-  if (select.value === "base64") {
-    result.innerText = base64()
-  } else if (select.value === "cifra") {
-    result.innerText = cifraCesar()
-  } 
-}) // transfere o resultado codificado ou decodificado para o campo de resultado conforme o algoritmo escolhido
+$('button').click(function(e){
+  e.preventDefault()
+if (select.value === "base64") {
+  result.innerText = base64()
+} else if (select.value === "cifra") {
+  result.innerText = cifraCesar()
+}})// transfere o resultado codificado ou decodificado para o campo de resultado conforme o algoritmo escolhido*/

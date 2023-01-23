@@ -82,8 +82,9 @@ $('.radiobtn').click(function(){
 
 $('button').click(function(e){
   e.preventDefault()
-if (select.value === "base64") {
+  if (select.value === "base64") {
   result.innerText = base64()
-} else if (select.value === "cifra") {
+  } else if (select.value === "cifra") {
   result.innerText = cifraCesar()
-}})// transfere o resultado codificado ou decodificado para o campo de resultado conforme o algoritmo escolhido*/
+  }
+})// transfere o resultado codificado ou decodificado para o campo de resultado conforme o algoritmo escolhido*/

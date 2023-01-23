@@ -4,7 +4,6 @@ const key = document.querySelector('.containerkey')
 const encode = document.getElementById('encode')
 const decode = document.getElementById('decode')
 
-
 // Cifra de César
 
 /*Código ASCII para JS

@@ -1,0 +1,155 @@
+/*reset css*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/*estilizando tags principais*/
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    background-color: #050505;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+label {
+    display: block;
+}
+
+/*título do projeto*/
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    letter-spacing: 6px;
+
+    font-family: 'VT323', monospace;
+    color: #cf0e80;
+}
+
+/*info do projeto*/
+p{
+    font-family:'Varela Round', sans-serif;
+    font-size: 1rem;
+}
+
+.info{
+    display: flex;
+    width: 800px;
+    margin: 30px 0px;
+    justify-content: space-around;
+    border: #cf0e80;
+   
+    color: #f3efef;
+}
+
+/* área de mensagem*/
+textarea{
+    width: 800px;
+    height: 80px;
+
+    background-color:#cf0e7f6d;
+    border: none;
+    border-radius: 5px;
+    color: #f3efef;
+}
+
+/*botão de selecionar*/
+select {
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    
+    background: #f1d8e57e;
+    color: #f3efef;
+    cursor: pointer;
+}
+
+select option {
+    background: #3c3c3c;
+    color: #f3efef;
+}
+
+/*botão de deslize da Cifra de Cesar*/
+.containerkey {
+    display: none;
+}
+
+.key {
+    text-align: center;
+    font-size: 0.875rem;
+    
+    color: #f3efef;
+}
+.slider {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+  
+input[type="number"] {
+    width: 30px;
+    text-align: center;
+    outline: none;
+
+    background-color: #050505;
+    border: 1px solid #cf0e80;
+    color: #cf0e80;
+}
+  
+
+/*botão radio de codificar e decodificar*/
+.radio {
+    display: inline-flex;
+    gap: 5px;
+
+    color: #cf0e80;
+}
+
+.radiobtn {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 20px;
+    outline: none;
+    
+    accent-color: #cf0e80;
+    cursor: pointer;
+}
+
+/*botão de resultado*/
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    
+    color: #f3efef;
+    background-color: #cf0e80;
+    cursor: pointer;
+}
+
+/*rodapé*/
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #f3efef;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 8px;
+}

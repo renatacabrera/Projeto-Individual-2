@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100&family=VT323&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="icon" href="./assets/img/icon.png">
+    <script defer src="./assets/js/script.js"></script>
+
+    <title>Mensagem Oculta</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+
+            <h1>MENSAGEM OCULTA</h1>
+
+            <div class="info">
+                <p> Inserir uma mensagem a ser codificada ou decodificada no primeiro bloco e escolher o algoritmo da Cifra de César ou Base64 a ser utilizado e receber o retorno da mensagem no bloco abaixo.</p>
+            </div>
+
+            <form> 
+                <textarea id="bloco1" placeholder="Digite sua mensagem..."></textarea> <!-- primeiro bloco de mensagem -->
+
+                <label></label>
+                <select class="select" id="select"> <!-- opção de seleção de algoritimo -->
+                    <option value="select" disabled selected>Selecione</option>
+                    <option value="base64">Base64</option>
+                    <option value="cifra">Cifra de César</option>
+                </select>
+                <div class="containerkey"> <!-- deslocamento da chave da cifra de cesar -->
+                    <label class="key" for="range">Escolha a Chave</label>
+                    <div class="slider">
+                        <input type="range" value="1" min="1" max="26" 
+                            oninput="slidernumber.value=value" />
+                        <input type="number" value="1" id="slidernumber" min="1" max="26" oninput="range.value=value" />
+                    </div> <!-- slider -->
+                </div> <!-- containerkey -->
+
+                <div class="radiobtn">
+                    <div class="radio">
+                        <input type="radio" name="encode" id="encode" value="encode" checked />
+                        <label for="encode">codificar</label>
+                    </div>
+
+                    <div class="radio">
+                        <input type="radio" name="encode" id="decode" value="decode" />
+                        <label for="decode">decodificar</label>
+                    </div>
+                </div> <!-- radiobtn -->
+
+                <div class="btn"> <!--mensagem que muda de acordo com a seleção acima-->
+                    <button>Codificar sua Mensagem!</button>
+                </div>
+
+                <textarea id="result" readonly placeholder="Mensagem Criptografada"></textarea> <!-- área de resultado --> 
+                
+            </form>
+        </div> <!-- container -->
+    </main>
+</body>
+<footer> © 2023 Desenvolvido por Renata Cabrera </footer>
+
+</html>

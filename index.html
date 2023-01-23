@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100&family=VT323&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/img/icon.png">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
     <script defer src="./assets/js/script.js"></script>
 
     <title>Mensagem Oculta</title>
@@ -36,9 +37,9 @@
                 </select>
                 <div class="containerkey"> <!-- deslocamento da chave da cifra de cesar -->
                     <label class="key" for="range">Escolha a Chave</label>
-                    <div class="slider">
+                    <div class="slider" id="slider">
                         <input type="range" value="1" min="1" max="26" 
-                            oninput="slidernumber.value=value" />
+                        oninput="slidernumber.value=value" />
                         <input type="number" value="1" id="slidernumber" min="1" max="26" oninput="range.value=value" />
                     </div> <!-- slider -->
                 </div> <!-- containerkey -->
